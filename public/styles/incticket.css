@@ -1,0 +1,63 @@
+ 
+.ticket-meta {
+    margin: 12px 0 0;
+    padding: 10px 15px 0;
+    border-top: 1px solid #eaeae9;
+    overflow: hidden;
+    clear: both;
+    color: #333;
+    font-size: .92em;
+    list-style: none;
+}
+
+.ticket-meta li {
+    margin: 0 15px 0 0;
+    padding: 0 15px 0 0;
+    border-right: 1px solid #eeeeed;
+    float: left;
+    margin-bottom: 10px;
+}
+
+.ticket-meta small {
+    display: block;
+    color: #999;
+    font-weight: 700;
+    font-size: 10px;
+    margin-bottom: 3px;
+}
+ 
+ /*
+    Ratings Stars
+    (with as little code as possible)
+*/
+.rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  text-align: center;
+}
+.rating > span {
+  display: inline-block;
+  position: relative;
+  /*width: 1.1em;*/
+}
+/*.rating > span:hover,
+.rating > span:hover ~ span {
+  color: transparent;
+}
+.rating > span:hover:before,
+.rating > span:hover ~ span:before {
+   content: "\2605";
+   position: absolute;
+   left: 0; 
+   color: gold;
+}*/
+
+.ratingGold{
+   content: "\2605";
+   position: absolute;
+   color: gold;
+}
+.rightimg{
+
+    text-align: left;
+}
