@@ -69,10 +69,11 @@ exports = module.exports = function (app) {
     app.put('/api/tickets/:id', keystone.middleware.api, routes.api.ticket.updateTicketById);
     app.delete('/api/tickets/:id', keystone.middleware.api, routes.api.ticket.deleteTicketById);
 
-    app.get('/getSelect', function (req, res) {
-        // If it's not showing up, just use req.body to see what is actually being passed.
-        console.log(req.body);
-    });
+
+    //MAIN SEARCH 
+    app.get('/home', routes.views.uni.search);
+
+
     // API LEGEND..
     // GET /api/tickets: This gets the list of tickets
     // GET /api/tickets/{id}: This gets the ticket with ID {id}
