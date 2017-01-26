@@ -39,8 +39,9 @@ exports = module.exports = function (app) {
     app.get('/', routes.views.index);
 
     //testing
-    app.get('/myticket', routes.views.tickets.myticket);
-
+    app.get('/mytickets', routes.views.tickets.myticket);
+    app.get('/mycards', routes.views.tickets.mycard);
+    
     // app.get('/tickets',function(req, res){
     //     res.send('We will show a list of tickets here');
     // });
