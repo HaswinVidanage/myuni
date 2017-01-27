@@ -43,15 +43,15 @@
 			</li>
 			<li class="rating">
 				<!-- This has to be optimized : consider using anything other than swig-->
-				{% if Card.rating == 5%}
+				{% if card.rating == 5%}
 				<span class="ratingGold">★</span><span class="ratingGold">★</span><span class="ratingGold">★</span><span class="ratingGold">★</span><span
-				class="ratingGold">★</span> {% elseif Card.rating == 4%}
+				class="ratingGold">★</span> {% elseif card.rating == 4%}
 				<span class="">☆</span><span class="ratingGold">★</span><span class="ratingGold">★</span><span class="ratingGold">★</span><span
-				class="ratingGold">★</span> {% elseif Card.rating == 3%}
+				class="ratingGold">★</span> {% elseif card.rating == 3%}
 				<span class="">☆</span><span class="">☆</span><span class="ratingGold">★</span><span class="ratingGold">★</span><span
-				class="ratingGold">★</span> {% elseif Card.rating == 2%}
-				<span class="">☆</span><span class="">☆</span><span class="">☆</span><span class="ratingGold">★</span><span class="ratingGold">★</span>				{% elseif Card.rating == 1%}
-				<span class="">☆</span><span class="">☆</span><span class="">☆</span><span class="">☆</span><span class="ratingGold">★</span>				{% elseif Card.rating
+				class="ratingGold">★</span> {% elseif card.rating == 2%}
+				<span class="">☆</span><span class="">☆</span><span class="">☆</span><span class="ratingGold">★</span><span class="ratingGold">★</span>				{% elseif card.rating == 1%}
+				<span class="">☆</span><span class="">☆</span><span class="">☆</span><span class="">☆</span><span class="ratingGold">★</span>				{% elseif card.rating
 				<=0 %} <span class="">☆</span><span class="">☆</span><span class="">☆</span><span class="">☆</span><span class="">☆</span> {% endif %}
 			</li>
 			<ul class="Card-meta">
@@ -67,7 +67,7 @@
 					<abbr class="last-updated">{{Card._.createdAt.format('Do MMMM YYYY')}}</abbr>
 				</li>
 				<li>
-					<a href='{{Card.url}}' class="btn btn-info" role="button" onclick="alert(" Hellp ")">More Details</a>
+					<a href='{{card.url}}' class="btn btn-info" role="button" onclick="alert(" Hellp ")">More Details</a>
 				</li>
 			</ul>
 		</td>

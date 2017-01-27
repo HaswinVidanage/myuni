@@ -34,14 +34,14 @@ var routes = {
 };
 
 // Setup Route Bindings
-exports = module.exports = function (app) {
+exports = module.exports = function(app) {
     // Views
     app.get('/', routes.views.index);
 
     //testing
     app.get('/mytickets', routes.views.tickets.myticket);
     app.get('/mycards', routes.views.tickets.mycard);
-    
+
     // app.get('/tickets',function(req, res){
     //     res.send('We will show a list of tickets here');
     // });
@@ -50,7 +50,8 @@ exports = module.exports = function (app) {
     //     res.send('We will show a ticket that has a slug : ' + req.params.ticketslug);
     // });
     app.get('/tickets/:ticketslug', routes.views.tickets.singleticket);
-    
+    app.get('/cards/:cardslug', routes.views.tickets.singlecard);
+
     app.all('/createticket', middleware.requireUser, routes.views.tickets.newticket);
 
     app.all('/join', routes.views.auth.join);
