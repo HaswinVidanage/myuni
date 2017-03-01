@@ -8,25 +8,25 @@
     #}
 		<div class="panel panel-primary">
         <!-- Default panel contents -->
-        <div class="panel-heading">Card details - {{data.ticket.title}}
+        <div class="panel-heading">Card details - {{data.card.title.name}}
         </div>
         <div class="panel-body">
-            <span class="label label-info pull-right">{{data.ticket.status}}</span>
-            <p>{{data.ticket.description}}</p>
+            <span class="label label-info pull-right">{{data.card.status}}</span>
+            <p>{{data.card.description}}</p>
         </div>
         <ul class="ticket-meta">
         <li>
-            <small>Status</small><a href="" rel="tag">{{data.ticket.status}}</a>
+            <small>Status</small><a href="" rel="tag">{{data.card.status}}</a>
         </li>
         <li>
-            <small>Priority</small><a href="" rel="tag">{{data.ticket.priority}}</a>
+            <small>Priority</small><a href="" rel="tag">{{data.card.priority}}</a>
         </li>
         <li>
-            <small>Category</small><a href="" rel="tag">{{data.ticket.category}}</a>
+            <small>Category</small><a href="" rel="tag">{{data.card.category}}</a>
         </li>
         <li>
             <small>Last Updated</small>
-            <abbr class="last-updated">{{data.ticket._.createdAt.format('Do MMMM YYYY')}}</abbr>
+            <abbr class="last-updated">{{data.card._.createdAt.format('Do MMMM YYYY')}}</abbr>
         </li>
         </ul>
         

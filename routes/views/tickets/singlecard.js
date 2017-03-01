@@ -10,17 +10,18 @@ exports = module.exports = function(req, res) {
     locals.section = 'home';
 
     locals.data = {
-        ticket: {},
+        card: {},
     };
 
     // Load all tickets
     view.on('init', function(next) {
 
-        var q = keystone.list('Card').model.findOne({ slug: req.params.cardslug });
+        var q = keystone.list('Card').model.findOne({ slug: req.params.cardslug }).populate('university institute title');
 
         q.exec(function(err, result) {
             if (result != null) {
-                locals.data.ticket = result;
+                locals.data.card = result;
+                console.log("SingleCard : \n " + result);
             } else {
                 return res.status(404).send(keystone.wrapHTMLError('Sorry, no ticket found! (404)'));
             }
